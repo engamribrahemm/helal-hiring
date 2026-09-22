@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Helal Hiring — Sign in</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { height: 100%; }
+    body {
+      min-height: 100vh;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #0d0d0d;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+    .panel {
+      width: 100%;
+      max-width: 420px;
+    }
+    .mark {
+      width: 36px;
+      height: 220px;
+      background: #FAD028;
+      transform: skewX(-14deg);
+      margin-bottom: 28px;
+    }
+    h1 {
+      font-size: 32px;
+      letter-spacing: -0.03em;
+      margin-bottom: 8px;
+      color: #FAD028;
+    }
+    p.sub {
+      color: rgba(255,255,255,0.7);
+      margin-bottom: 32px;
+      font-size: 15px;
+    }
+    label {
+      display: block;
+      font-size: 13px;
+      margin-bottom: 8px;
+      color: rgba(255,255,255,0.8);
+    }
+    input {
+      width: 100%;
+      background: #1a1a1a;
+      border: 1px solid #333;
+      color: #fff;
+      border-radius: 8px;
+      padding: 14px 16px;
+      font-size: 16px;
+      margin-bottom: 18px;
+      outline: none;
+    }
+    input:focus { border-color: #FAD028; }
+    button {
+      width: 100%;
+      background: #FAD028;
+      color: #111;
+      border: 0;
+      border-radius: 8px;
+      padding: 14px 16px;
+      font-size: 16px;
+      font-weight: 700;
+      cursor: pointer;
+      margin-top: 8px;
+    }
+    button:hover { filter: brightness(1.05); }
+    .error {
+      background: #2a1215;
+      color: #ff8a80;
+      border: 1px solid #5c2b2e;
+      border-radius: 8px;
+      padding: 12px 14px;
+      margin-bottom: 18px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <div class="panel">
+    <div class="mark" aria-hidden="true"></div>
+    <h1>Helal Hiring</h1>
+    <p class="sub">Sign in to open the hiring portal.</p>
+    {{ERROR}}
+    <form method="post" action="/login" autocomplete="off">
+      <label for="username">Username</label>
+      <input id="username" name="username" type="text" required autofocus>
+      <label for="password">Password</label>
+      <input id="password" name="password" type="password" required>
+      <button type="submit">Sign in</button>
+    </form>
+  </div>
+</body>
+</html>
