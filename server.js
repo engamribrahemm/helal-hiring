@@ -184,7 +184,11 @@ app.use((req, res) => {
   res.status(404).type("text").send("Not found");
 });
 
-const port = Number(process.env.PORT) || 3000;
-app.listen(port, "0.0.0.0", () => {
-  console.log("Helal hiring portal listening on port", port);
-});
+module.exports = app;
+
+if (require.main === module) {
+  const port = Number(process.env.PORT) || 3000;
+  app.listen(port, "0.0.0.0", () => {
+    console.log("Helal hiring portal listening on port", port);
+  });
+}
